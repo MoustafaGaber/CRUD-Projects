@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead id="mythead" class="thead-dark">
+      <tr>
+        <th scope="col">Book Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Number Of Pages</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+<tr *ngFor="let bk of service.list">
+  <td (click)="fillform(bk)"> {{ bk.title }} </td>
+  <td (click)="fillform(bk)"> {{ bk.author }} </td>
+  <td (click)="fillform(bk)"> {{ bk.numberofpages }} </td>
+  <td>
+    <i class="far fa-trash-alt fa-lg text-danger" (click)="ondelete(bk.id)"></i>
+  </td>
+
+</tr>
+</tbody>
+</table>
